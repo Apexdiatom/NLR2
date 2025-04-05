@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Globe with Babylon.js</title>
+  <link rel="stylesheet" href="/css/History.css">
+</head> 
+<body>
+  <div id="container">
+    <canvas id="renderCanvas"></canvas>
+    <div id="bookshelf">
+      <h2>Bookshelf</h2>
+      <div class="books">
+        <!-- Example books -->
+        <a class="book" href="/History/Overview.html" target="_blank">📘 Historical Overview</a>
+        <div class="book">📙 Historiography</div>
+        <div class="book">📗 Alternative Hisory</div>
+        <div class="book">📗 Horology</div>
+        <div class="book">📗 Futorology</div>
+      </div>
+    </div>
+    <div id="ai-chat">
+      <h2>Historian Party Room</h2>
+      <div id="chat-box">
+        <div id="chat-messages"></div>
+        <div id="chat-input">
+          <input type="text" id="user-input" placeholder="Call upon a Historian..." />
+          <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <!-- Babylon.js CDN -->
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+
+  <!-- Your external JS file -->
+  <script src="js/History.js"></script>
+  
+  <!-- Your AI JS file -->
+
+</body>
+</html>

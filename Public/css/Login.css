@@ -1,0 +1,52 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/images/Gun-Metal-GP040_Square_600x600_BlackenedSteel.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Consolidated Container */
+.login-row {
+  background: url('/images/wmremove-transformed.jpeg') no-repeat center center;
+  background-size: cover;
+  width: 80vw;
+  height: 45vw; /* maintain 16:9 aspect ratio */
+  max-width: 400px;
+  max-height: 100px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Input and Button inside row */
+.login-row input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.login-row button {
+  padding: 0.75rem 1.5rem;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.login-row button:hover {
+  background-color: #5a67d8;
+}

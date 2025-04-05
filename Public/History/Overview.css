@@ -1,0 +1,121 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%;
+    overflow: auto; /* ✅ Allow scrolling if content exceeds viewport */
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .input-bar {
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .input-bar input {
+    padding: 6px 10px;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  .timeline-container {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #f9f9f9;
+    white-space: nowrap;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .timeline {
+    display: inline-block;
+    height: 100%;
+  }
+  
+  .tick {
+    display: inline-block;
+    width: 2px;
+    height: 30px;
+    background: #999;
+    margin-right: 8px;
+    vertical-align: top;
+  }
+  
+  .tick.century {
+    height: 60px;
+    background: #333;
+    position: relative;
+  }
+  
+  .tick.century::after {
+    content: attr(data-label);
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #555;
+    white-space: nowrap;
+  }
+  
+  .tick.active {
+    position: relative;
+    background-color: blue !important;
+    height: 70px;
+  }
+  /* Teardrop marker on top */
+.tick.active::after {
+    content: '';
+    position: absolute;
+    bottom: 100%; /* Position above the tick */
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    width: 16px;
+    height: 16px;
+    background: blue;
+    border-radius: 50% 50% 50% 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+    
+  
+  .event-display {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: white;
+    font-size: 18px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    z-index: 9; /* stays below center marker and header */
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .event-display h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    color: #222;
+  }
+  
+  .event-display p {
+    margin: 0;
+    color: #444;
+  }
+  

@@ -1,0 +1,42 @@
+html,body {
+    height: auto-fit;
+    margin: 0;
+    padding: 0;
+}
+body{
+   background-image: url(/images/silver-brushed-metal-texture.jpg);
+}
+h1{
+    text-align: center;
+    margin: 15px 0;
+}
+#wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+.box { 
+    width: 300px; /* fixed width */
+    padding: 12px;
+    background-color:#daa520;
+    color: #000000;
+    font-weight: bold;
+    font-family:"Copperplate", "Copperplate Gothic Light", serif;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.box:hover {
+    transform: translateY(-3px);
+}
