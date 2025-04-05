@@ -16,7 +16,7 @@ app.use(session({
 }));
 
 // Serve static files like CSS/JS from 'public'
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve the sign-in page at the root
 app.get('/', (req, res) => {
